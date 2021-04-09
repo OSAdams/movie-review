@@ -24,7 +24,7 @@ const styles = {
     border: 'none',
     borderRadius: '2px',
     height: '35px',
-    width: '70%',
+    width: '50%',
     outline: 'none',
     color: '#F5F5F5',
     textAlign: 'center'
@@ -35,7 +35,7 @@ const styles = {
     border: 'none',
     borderRadius: '2px',
     height: '35px',
-    width: '70%',
+    width: '50%',
     color: '#F5F5F5',
     textAlign: 'center',
     marginTop: '1rem'
