@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchString from '../components/SearchString';
 
 const styles = {
   container: {
@@ -23,6 +24,7 @@ const styles = {
     background: '#6774ED',
     border: 'none',
     borderRadius: '2px',
+    boxShadow: '0px 3px rgba(0, 0, 0, 0.1)',
     height: '35px',
     width: '50%',
     outline: 'none',
@@ -34,6 +36,7 @@ const styles = {
     outline: 'none',
     border: 'none',
     borderRadius: '2px',
+    boxShadow: '0px 3px rgba(0, 0, 0, 0.1)',
     height: '35px',
     width: '50%',
     color: '#F5F5F5',
@@ -42,16 +45,51 @@ const styles = {
   }
 };
 
-export default function Home(props) {
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { searchValue: '' };
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-  return (
-      <div className='container' style={ styles.container }>
+  handleChange(event) {
+    this.setState({ searchValue: event.target.value });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const searchStr = SearchString(this.state.searchValue);
+    // eslint-disable-next-line no-console
+    console.log('value of searchStr: ', searchStr);
+  }
+
+  render() {
+    return (
+      <div className='container'
+        style={ styles.container }>
+
         <img src='/images/logo.png' alt='Logo' style={ styles.logo }></img>
-        <div className='search' style={ styles.searchColumn }>
-          <p style={ styles.fontStyles }>Search by Title</p>
-          <input type='search' placeholder='Movie Name' style={ styles.searchBox }></input>
-          <button type='submit' style={ styles.searchButton }>Search</button>
-        </div>
+
+          <div className='search' style={ styles.searchColumn }>
+
+            <p style={ styles.fontStyles }>Search by Title!</p>
+
+            <form onSubmit={ this.handleSubmit } style={ styles.searchColumn }>
+
+              <input type='search' placeholder='Movie Name' onChange={ this.handleChange } style={ styles.searchBox } />
+
+              <button type='submit' style={ styles.searchButton }>
+                Search
+              </button>
+
+            </form>
+
+          </div>
+
       </div>
-  );
+    );
+  }
 }
+
+export default Home;
