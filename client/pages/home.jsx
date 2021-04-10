@@ -60,8 +60,14 @@ class Home extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const searchStr = SearchString(this.state.searchValue);
-    // eslint-disable-next-line no-console
-    console.log('value of searchStr: ', searchStr);
+    let movieObj = {};
+    fetch(`http://www.omdbapi.com/?t=${searchStr}&apikey=67b9bb43`)
+      .then(res => res.json())
+      .then(json => {
+        movieObj = json;
+        // eslint-disable-next-line no-console
+        console.log(movieObj);
+      });
   }
 
   render() {
