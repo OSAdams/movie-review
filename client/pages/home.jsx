@@ -5,14 +5,17 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    background: '#BEBBD4'
   },
   logo: {
     marginTop: '2.5rem'
   },
   fontStyles: {
     color: '#222222',
-    fontSize: '24px'
+    fontSize: '24px',
+    marginTop: '1rem',
+    marginBottom: '1rem'
   },
   searchColumn: {
     width: '100%',
@@ -41,14 +44,15 @@ const styles = {
     width: '50%',
     color: '#F5F5F5',
     textAlign: 'center',
-    marginTop: '1rem'
+    marginTop: '1rem',
+    marginBottom: '6.55rem'
   }
 };
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searchValue: '' };
+    this.state = { searchValue: '', userInputValue: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -59,15 +63,8 @@ class Home extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const searchStr = SearchString(this.state.searchValue);
-    let movieObj = {};
-    fetch(`http://www.omdbapi.com/?t=${searchStr}&apikey=67b9bb43`)
-      .then(res => res.json())
-      .then(json => {
-        movieObj = json;
-        // eslint-disable-next-line no-console
-        console.log(movieObj);
-      });
+    const userInputValue = SearchString(this.state.searchValue);
+    window.location.hash = '#search-results?title=' + userInputValue;
   }
 
   render() {
