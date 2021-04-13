@@ -16,3 +16,7 @@ img {
 .search:focus {
   outline: none;
 }
+
+.bold-text-margin {
+  margin-bottom: 5px;
+}

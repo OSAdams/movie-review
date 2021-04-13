@@ -8,8 +8,10 @@ const styles = {
     background: '#3850A5',
     width: '95%',
     display: 'flex',
-    padding: '1rem 0.5rem',
-    margin: 'auto'
+    paddingTop: '1rem',
+    paddingLeft: '0.5rem',
+    margin: 'auto',
+    color: '#F5F5F5'
   },
   col: {
     paddingTop: '2rem',
@@ -17,10 +19,19 @@ const styles = {
   },
   txtCenter: {
     textAlign: 'center',
-    color: '#F5F5F5'
+    color: '#F5F5F5',
+    fontSize: '36px'
+  },
+  txtBold: {
+    fontWeight: 'bold',
+    paddingBottom: '5px',
+    fontSize: '12px'
   },
   poster: {
     width: '100%'
+  },
+  txtReg: {
+
   }
 };
 
@@ -45,7 +56,7 @@ class DisplayMovie extends React.Component {
 
   render() {
     if (!this.state.movie) return null;
-    const { Title, Poster } = this.state.movie;
+    const { Title, Poster, Plot } = this.state.movie;
     return (
       <div className='container' style={ styles.container }>
         <div className='movie-container'>
@@ -57,8 +68,11 @@ class DisplayMovie extends React.Component {
               <h3 style={ styles.txtCenter }>{Title}</h3>
             </div>
           </div>
-          <div className='movie-row-2'>
-
+          <div className='movie-row-2' style={ styles.infoContainer }>
+            <div className='movie-plot'>
+              <p style={ styles.txtBold }>Plot:</p>
+              <p style={ styles.txtReg }>{Plot}</p>
+            </div>
           </div>
         </div>
       </div>
