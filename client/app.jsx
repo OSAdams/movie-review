@@ -26,7 +26,7 @@ export default class App extends React.Component {
     }
     if (route.path === 'search-results') {
       const title = route.params.get('title');
-      return <DisplayMovie title={title}/>;
+      return <DisplayMovie userInputValue={title} />;
     }
   }
 
