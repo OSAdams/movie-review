@@ -85,9 +85,7 @@ class DisplayMovie extends React.Component {
 
               <div className='movie-data-col'>
 
-                <div className='movie-genre' styles={ Object.assign({},
-                  styles.botPad,
-                  styles.dataRow) }>
+                <div className='movie-genre' styles={ styles.botPad }>
 
                   <span className='label' style={ styles.labelTxt }>Genre:</span>
 
