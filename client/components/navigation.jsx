@@ -2,6 +2,7 @@ import React from 'react';
 
 const styles = {
   nav: {
+    position: 'static',
     background: '#49208C',
     width: '100%',
     height: '40px',
