@@ -2,7 +2,8 @@ import React from 'react';
 
 const styles = {
   movieContainer: {
-    background: '#BEBBD4'
+    background: '#BEBBD4',
+    paddingTop: '5px'
   },
   infoContainer: {
     background: '#3850A5',
@@ -14,6 +15,9 @@ const styles = {
   row1: {
     width: '50%',
     padding: '0 5px'
+  },
+  poster: {
+    paddingTop: '5px'
   }
 };
 
@@ -44,7 +48,7 @@ class DisplayMovie extends React.Component {
 
         <div style={ styles.infoContainer }>
 
-          <div className='movie-poster' style={ styles.row1 }>
+          <div className='movie-poster' style={ Object.assign({}, styles.row1, styles.poster) }>
 
             <img src={Poster} alt={Title} />
 
