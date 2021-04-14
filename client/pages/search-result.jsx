@@ -20,7 +20,7 @@ const styles = {
   txtCenter: {
     textAlign: 'center',
     color: '#F5F5F5',
-    fontSize: '36px'
+    fontSize: '30px'
   },
   txtBold: {
     fontWeight: 'bold',
