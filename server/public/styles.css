@@ -20,3 +20,8 @@ img {
 p {
   font-size: 12px;
 }
+
+.movie-genre {
+  display: flex;
+  justify-content: space-between;
+}
