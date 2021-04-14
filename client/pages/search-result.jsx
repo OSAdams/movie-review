@@ -8,16 +8,25 @@ const styles = {
   infoContainer: {
     background: '#3850A5',
     width: '95%',
-    display: 'flex',
     margin: 'auto',
     color: '#F5F5F5'
   },
   row1: {
     width: '50%',
-    padding: '0 5px'
+    padding: '0 5px',
+    paddingTop: '2px'
   },
   poster: {
     paddingTop: '5px'
+  },
+  movieRow1: {
+    display: 'flex'
+  },
+  labelTxt: {
+    fontWeight: 'bold'
+  },
+  botPad: {
+    paddingBottom: '3px'
   }
 };
 
@@ -42,35 +51,39 @@ class DisplayMovie extends React.Component {
 
   render() {
     if (!this.state.movie) return null;
-    const { Title, Poster } = this.state.movie;
+    const { Title, Poster, Plot } = this.state.movie;
     return (
       <div className='movie-container' style={ styles.movieContainer }>
 
-        <div style={ styles.infoContainer }>
+        <div className='movie-information' style={ styles.infoContainer }>
 
-          <div className='movie-poster' style={ Object.assign({}, styles.row1, styles.poster) }>
+          <div className='movie-row-1' style={ styles.movieRow1 }>
 
-            <img src={Poster} alt={Title} />
+            <div className='movie-poster' style={ Object.assign({}, styles.row1, styles.poster) }>
+
+              <img src={Poster} alt={Title} />
+
+            </div>
+
+            <div className='movie-information' style={ styles.row1 }>
+
+              <h3>{Title}</h3>
+
+            </div>
 
           </div>
 
-          <div className='movie-information' style={ styles.row1 }>
-
-            <h3>{Title}</h3>
-
-          </div>
-
-          {/* <div>
+          <div className='movie-information-2' style={ styles.infoContainer }>
 
             <div className='movie-plot'>
 
-              <p>Plot:</p>
+              <p style={ Object.assign({}, styles.labelTxt, styles.botPad) }>Plot:</p>
 
               <p>{Plot}</p>
 
             </div>
 
-          </div> */}
+          </div>
 
         </div>
 
