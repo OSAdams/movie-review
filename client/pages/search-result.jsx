@@ -17,8 +17,7 @@ const styles = {
     paddingTop: '2rem',
     width: '50%'
   },
-  txtCenter: {
-    textAlign: 'center',
+  txtTitle: {
     color: '#F5F5F5',
     fontSize: '30px'
   },
