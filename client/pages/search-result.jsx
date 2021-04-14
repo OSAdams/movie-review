@@ -8,25 +8,12 @@ const styles = {
     background: '#3850A5',
     width: '95%',
     display: 'flex',
-    paddingTop: '1rem',
-    paddingLeft: '0.5rem',
     margin: 'auto',
     color: '#F5F5F5'
   },
-  col: {
-    paddingTop: '2rem',
-    width: '50%'
-  },
-  txtTitle: {
-    color: '#F5F5F5',
-    fontSize: '30px'
-  },
-  txtBold: {
-    fontWeight: 'bold',
-    paddingBottom: '5px'
-  },
-  poster: {
-    width: '100%'
+  row1: {
+    width: '50%',
+    padding: '0 5px'
   }
 };
 
@@ -51,25 +38,38 @@ class DisplayMovie extends React.Component {
 
   render() {
     if (!this.state.movie) return null;
-    const { Title, Poster, Plot } = this.state.movie;
+    const { Title, Poster } = this.state.movie;
     return (
       <div className='movie-container' style={ styles.movieContainer }>
-        <div className='movie-col'>
-          <div className='movie-row-1' style={ styles.infoContainer }>
-            <div className='movie-poster' style={ styles.col }>
-              <img src={Poster} alt={Title} style={ styles.poster } />
-            </div>
-            <div className='movie-information' style={ styles.col }>
-              <h3 style={ styles.txtCenter }>{Title}</h3>
-            </div>
+
+        <div style={ styles.infoContainer }>
+
+          <div className='movie-poster' style={ styles.row1 }>
+
+            <img src={Poster} alt={Title} />
+
           </div>
-          <div className='movie-row-2' style={ styles.infoContainer }>
+
+          <div className='movie-information' style={ styles.row1 }>
+
+            <h3>{Title}</h3>
+
+          </div>
+
+          {/* <div>
+
             <div className='movie-plot'>
-              <p style={ styles.txtBold }>Plot:</p>
-              <p style={ styles.txtReg }>{Plot}</p>
+
+              <p>Plot:</p>
+
+              <p>{Plot}</p>
+
             </div>
-          </div>
+
+          </div> */}
+
         </div>
+
       </div>
     );
   }
