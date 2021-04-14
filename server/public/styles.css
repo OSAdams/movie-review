@@ -16,3 +16,7 @@ img {
 .search:focus {
   outline: none;
 }
+
+p {
+  font-size: 12px;
+}

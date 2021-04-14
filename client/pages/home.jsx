@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchString from '../components/SearchString';
+import SearchString from '../lib/search-string';
 
 const styles = {
   container: {
@@ -52,7 +52,7 @@ const styles = {
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searchValue: '', userInputValue: '' };
+    this.state = { searchValue: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
