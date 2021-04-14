@@ -17,6 +17,6 @@ img {
   outline: none;
 }
 
-.bold-text-margin {
-  margin-bottom: 5px;
+p {
+  font-size: 12px;
 }

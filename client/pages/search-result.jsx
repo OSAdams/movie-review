@@ -1,7 +1,7 @@
 import React from 'react';
 
 const styles = {
-  container: {
+  movieContainer: {
     background: '#BEBBD4'
   },
   infoContainer: {
@@ -24,14 +24,10 @@ const styles = {
   },
   txtBold: {
     fontWeight: 'bold',
-    paddingBottom: '5px',
-    fontSize: '12px'
+    paddingBottom: '5px'
   },
   poster: {
     width: '100%'
-  },
-  txtReg: {
-
   }
 };
 
@@ -58,8 +54,8 @@ class DisplayMovie extends React.Component {
     if (!this.state.movie) return null;
     const { Title, Poster, Plot } = this.state.movie;
     return (
-      <div className='container' style={ styles.container }>
-        <div className='movie-container'>
+      <div className='movie-container' style={ styles.movieContainer }>
+        <div className='movie-col'>
           <div className='movie-row-1' style={ styles.infoContainer }>
             <div className='movie-poster' style={ styles.col }>
               <img src={Poster} alt={Title} style={ styles.poster } />
