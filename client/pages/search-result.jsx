@@ -25,16 +25,6 @@ const styles = {
   dataRow: {
     display: 'flex',
     justifyContent: 'space-between'
-  },
-  labelTxt: {
-    fontWeight: 'bold',
-    fontSize: '12px'
-  },
-  botPad: {
-    paddingBottom: '3px'
-  },
-  defaultFont: {
-    fontSize: '12px'
   }
 };
 
@@ -59,7 +49,17 @@ class DisplayMovie extends React.Component {
 
   render() {
     if (!this.state.movie) return null;
-    const { Title, Poster, Plot, Genre } = this.state.movie;
+    const {
+      Title,
+      Poster,
+      Plot,
+      Genre,
+      Rated,
+      Released,
+      Runtime,
+      Director,
+      BoxOffice
+    } = this.state.movie;
     return (
       <div className='movie-container' style={ styles.movieContainer }>
 
@@ -85,11 +85,51 @@ class DisplayMovie extends React.Component {
 
               <div className='movie-data-col'>
 
-                <div className='movie-genre' styles={ styles.botPad }>
+                <div className='movie-row'>
 
-                  <span className='label' style={ styles.labelTxt }>Genre:</span>
+                  <span className='label'>Genre:</span>
 
-                  <span className='value' style={ styles.defaultFont }>{Genre}</span>
+                  <span className='value'>{Genre}</span>
+
+                </div>
+
+                <div className='movie-row'>
+
+                  <span className='label'>Rated:</span>
+
+                  <span className='value'>{Rated}</span>
+
+                </div>
+
+                <div className='movie-row'>
+
+                  <span className='label'>Release:</span>
+
+                  <span className='value'>{Released}</span>
+
+                </div>
+
+                <div className='movie-row'>
+
+                  <span className='label'>Director:</span>
+
+                  <span className='value'>{Director}</span>
+
+                </div>
+
+                <div className='movie-row'>
+
+                  <span className='label'>Runtime:</span>
+
+                  <span className='value'>{Runtime}</span>
+
+                </div>
+
+                <div className='movie-row'>
+
+                  <span className='label'>Box Office:</span>
+
+                  <span className='value'>{BoxOffice}</span>
 
                 </div>
 
@@ -103,7 +143,7 @@ class DisplayMovie extends React.Component {
 
             <div className='movie-plot'>
 
-              <p style={ Object.assign({}, styles.labelTxt, styles.botPad) }>Plot:</p>
+              <p className='label'>Plot:</p>
 
               <p>{Plot}</p>
 

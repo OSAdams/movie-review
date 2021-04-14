@@ -21,7 +21,17 @@ p {
   font-size: 12px;
 }
 
-.movie-genre {
+.movie-row {
   display: flex;
   justify-content: space-between;
+  margin-top: 0.25rem;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.value {
+  font-size: 12px;
 }
