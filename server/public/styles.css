@@ -35,3 +35,7 @@ p {
 .value {
   font-size: 12px;
 }
+
+.movie-title {
+  margin-top: 0.1rem;
+}

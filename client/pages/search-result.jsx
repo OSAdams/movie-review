@@ -58,7 +58,8 @@ class DisplayMovie extends React.Component {
       Released,
       Runtime,
       Director,
-      BoxOffice
+      BoxOffice,
+      Ratings
     } = this.state.movie;
     return (
       <div className='movie-container' style={ styles.movieContainer }>
@@ -133,6 +134,14 @@ class DisplayMovie extends React.Component {
 
                 </div>
 
+                <div className='movie-row'>
+
+                  <span className='label'>Box Office:</span>
+
+                  <span className='value'>{BoxOffice}</span>
+
+                </div>
+
               </div>
 
             </div>
@@ -140,6 +149,34 @@ class DisplayMovie extends React.Component {
           </div>
 
           <div className='movie-information-2' style={ styles.infoContainer }>
+
+            <div className='movie-row'>
+
+              <div>
+
+                <span className='label'>IMDB:</span>
+
+                <span className='value'>{Ratings[0].Value}</span>
+
+              </div>
+
+              <div>
+
+                <span className='label'>RTM:</span>
+
+                <span className='value'>{Ratings[1].Value}</span>
+
+              </div>
+
+              <div>
+
+                <span className='label'>Metacritic:</span>
+
+                <span className='value'>{Ratings[2].Value}</span>
+
+              </div>
+
+            </div>
 
             <div className='movie-plot'>
 
