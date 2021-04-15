@@ -21,10 +21,26 @@ p {
   font-size: 12px;
 }
 
+.movie-container {
+  background: #bebbd4;
+  padding-top: 5px;
+}
+
+.movie-info-container {
+  background: #3850a5;
+  width: 95%;
+  margin: auto;
+  color: #f5f5f5;
+}
+
 .movie-row {
   display: flex;
   justify-content: space-between;
   margin-top: 0.25rem;
+}
+
+.movie-column {
+  display: flex;
 }
 
 .movie-row-2 {
@@ -43,4 +59,20 @@ p {
 
 .movie-title {
   margin-top: 0.1rem;
+}
+
+.movie-poster {
+  width: 50%;
+  padding: 0 5px;
+  padding-top: 7px;
+}
+
+.movie-info {
+  width: 50%;
+  padding: 0 5px;
+  padding-top: 2px;
+}
+
+.movie-plot {
+  margin-top: 0.25rem;
 }
