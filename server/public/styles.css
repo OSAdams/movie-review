@@ -43,6 +43,10 @@ p {
   display: flex;
 }
 
+.movie-row-1 {
+  margin-top: 0.25rem;
+}
+
 .movie-row-2 {
   display: flex;
   justify-content: space-between;
@@ -55,6 +59,11 @@ p {
 
 .value {
   font-size: 12px;
+}
+
+.value-1 {
+  font-size: 12px;
+  align-content: right;
 }
 
 .movie-title {

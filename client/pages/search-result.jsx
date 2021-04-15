@@ -60,11 +60,11 @@ class DisplayMovie extends React.Component {
 
               <div className='movie-data-col'>
 
-                <div className='movie-row'>
+                <div className='movie-row-1'>
 
                   <span className='label'>Genre:</span>
 
-                  <span className='value'>{Genre}</span>
+                  <div className='value'>{Genre}</div>
 
                 </div>
 
