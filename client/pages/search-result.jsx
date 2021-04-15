@@ -1,32 +1,5 @@
 import React from 'react';
 
-const styles = {
-  movieContainer: {
-    background: '#BEBBD4',
-    paddingTop: '5px'
-  },
-  infoContainer: {
-    background: '#3850A5',
-    width: '95%',
-    margin: 'auto',
-    color: '#F5F5F5'
-  },
-  row1: {
-    width: '50%',
-    padding: '0 5px',
-    paddingTop: '2px'
-  },
-  poster: {
-    paddingTop: '5px'
-  },
-  movieRow1: {
-    display: 'flex'
-  },
-  dataRow: {
-    marginBottom: '0.25rem'
-  }
-};
-
 class DisplayMovie extends React.Component {
   constructor(props) {
     super(props);
@@ -65,35 +38,33 @@ class DisplayMovie extends React.Component {
     const rtmRating = 'RTM: ';
     const metaRating = 'Metacritic: ';
     return (
-      <div className='movie-container' style={ styles.movieContainer }>
+      <div className='movie-container'>
 
-        <div className='movie-information' style={ styles.infoContainer }>
+        <div className='movie-info-container'>
 
-          <div className='movie-row-1' style={ styles.movieRow1 }>
+          <div className='movie-title'>
 
-            <div className='movie-poster' style={ Object.assign({},
-              styles.row1,
-              styles.poster) }>
+            <h3>{Title}</h3>
+
+          </div>
+
+          <div className='movie-column'>
+
+            <div className='movie-poster'>
 
               <img src={Poster} alt={Title} />
 
             </div>
 
-            <div className='movie-row-1' style={ styles.row1 }>
-
-              <div className='movie-title'>
-
-                <h3>{Title}</h3>
-
-              </div>
+            <div className='movie-info'>
 
               <div className='movie-data-col'>
 
-                <div className='movie-row'>
+                <div>
 
                   <span className='label'>Genre:</span>
 
-                  <span className='value'>{Genre}</span>
+                  <div className='value-1'>{Genre}</div>
 
                 </div>
 
@@ -151,9 +122,9 @@ class DisplayMovie extends React.Component {
 
           </div>
 
-          <div className='movie-data-col2' style={ styles.infoContainer }>
+          <div className='movie-info-container'>
 
-            <div className='movie-row-2' style={ styles.dataRow }>
+            <div className='movie-row-2'>
 
               <div>
 
