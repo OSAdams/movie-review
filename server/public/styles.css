@@ -20,3 +20,27 @@ img {
 p {
   font-size: 12px;
 }
+
+.movie-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.25rem;
+}
+
+.movie-row-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.value {
+  font-size: 12px;
+}
+
+.movie-title {
+  margin-top: 0.1rem;
+}

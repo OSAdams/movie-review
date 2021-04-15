@@ -2,7 +2,7 @@ import React from 'react';
 
 const styles = {
   nav: {
-    position: 'absolute',
+    position: 'static',
     background: '#49208C',
     width: '100%',
     height: '40px',
@@ -25,12 +25,19 @@ const styles = {
 export default function Navigation(props) {
   return (
       <header className='header' style={ styles.nav }>
+
         <div className='menu-icon' style={ styles.icon }>
+
           <i className='fas fa-bars'></i>
+
         </div>
+
         <div className='title' style={ styles.title }>
+
           <h2>Movie Review</h2>
+
         </div>
+
       </header>
   );
 }

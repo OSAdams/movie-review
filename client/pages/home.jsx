@@ -9,7 +9,7 @@ const styles = {
     background: '#BEBBD4'
   },
   logo: {
-    marginTop: '2.5rem'
+    marginBottom: '1.5rem'
   },
   fontStyles: {
     color: '#222222',
@@ -45,7 +45,7 @@ const styles = {
     color: '#F5F5F5',
     textAlign: 'center',
     marginTop: '1rem',
-    marginBottom: '6.55rem'
+    marginBottom: '5rem'
   }
 };
 
