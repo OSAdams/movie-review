@@ -42,6 +42,12 @@ class DisplayMovie extends React.Component {
 
         <div className='movie-info-container'>
 
+          <div className='movie-title'>
+
+            <h3>{Title}</h3>
+
+          </div>
+
           <div className='movie-column'>
 
             <div className='movie-poster'>
@@ -52,19 +58,13 @@ class DisplayMovie extends React.Component {
 
             <div className='movie-info'>
 
-              <div className='movie-title'>
-
-                <h3>{Title}</h3>
-
-              </div>
-
               <div className='movie-data-col'>
 
-                <div className='movie-row-1'>
+                <div>
 
                   <span className='label'>Genre:</span>
 
-                  <div className='value'>{Genre}</div>
+                  <div className='value-1'>{Genre}</div>
 
                 </div>
 
