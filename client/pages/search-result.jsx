@@ -23,8 +23,7 @@ const styles = {
     display: 'flex'
   },
   dataRow: {
-    display: 'flex',
-    justifyContent: 'space-between'
+    marginBottom: '0.25rem'
   }
 };
 
@@ -59,8 +58,12 @@ class DisplayMovie extends React.Component {
       Runtime,
       Director,
       BoxOffice,
-      Ratings
+      Ratings,
+      Awards
     } = this.state.movie;
+    const imdbRating = 'IMDB: ';
+    const rtmRating = 'RTM: ';
+    const metaRating = 'Metacritic: ';
     return (
       <div className='movie-container' style={ styles.movieContainer }>
 
@@ -134,11 +137,11 @@ class DisplayMovie extends React.Component {
 
                 </div>
 
-                <div className='movie-row'>
+                <div className='movie-row-3'>
 
-                  <span className='label'>Box Office:</span>
+                  <span className='label'>Awards:</span>
 
-                  <span className='value'>{BoxOffice}</span>
+                  <p className='value'>{Awards}</p>
 
                 </div>
 
@@ -148,13 +151,13 @@ class DisplayMovie extends React.Component {
 
           </div>
 
-          <div className='movie-information-2' style={ styles.infoContainer }>
+          <div className='movie-data-col2' style={ styles.infoContainer }>
 
-            <div className='movie-row'>
+            <div className='movie-row-2' style={ styles.dataRow }>
 
               <div>
 
-                <span className='label'>IMDB:</span>
+                <span className='label'>{ imdbRating }</span>
 
                 <span className='value'>{Ratings[0].Value}</span>
 
@@ -162,7 +165,7 @@ class DisplayMovie extends React.Component {
 
               <div>
 
-                <span className='label'>RTM:</span>
+                <span className='label'>{ rtmRating }</span>
 
                 <span className='value'>{Ratings[1].Value}</span>
 
@@ -170,7 +173,7 @@ class DisplayMovie extends React.Component {
 
               <div>
 
-                <span className='label'>Metacritic:</span>
+                <span className='label'>{ metaRating }</span>
 
                 <span className='value'>{Ratings[2].Value}</span>
 
