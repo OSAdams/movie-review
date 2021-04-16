@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewInput from '../components/user-input';
 
 class DisplayMovie extends React.Component {
   constructor(props) {
@@ -161,6 +162,8 @@ class DisplayMovie extends React.Component {
             </div>
 
           </div>
+
+          <ReviewInput />
 
         </div>
 
