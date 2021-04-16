@@ -45,7 +45,7 @@ class DisplayMovie extends React.Component {
 
           <div className='movie-title'>
 
-            <h3>{Title}</h3>
+            <h2>{Title}</h2>
 
           </div>
 
