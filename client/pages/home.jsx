@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchString from '../lib/search-string';
 
-class Home extends React.Component {
+export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { searchValue: '' };
@@ -48,5 +48,3 @@ class Home extends React.Component {
     );
   }
 }
-
-export default Home;
