@@ -1,54 +1,6 @@
 import React from 'react';
 import SearchString from '../lib/search-string';
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    background: '#BEBBD4'
-  },
-  logo: {
-    marginBottom: '1.5rem'
-  },
-  fontStyles: {
-    color: '#222222',
-    fontSize: '24px',
-    marginTop: '1rem',
-    marginBottom: '1rem'
-  },
-  searchColumn: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  searchBox: {
-    background: '#6774ED',
-    border: 'none',
-    borderRadius: '2px',
-    boxShadow: '0px 3px rgba(0, 0, 0, 0.1)',
-    height: '35px',
-    width: '50%',
-    outline: 'none',
-    color: '#F5F5F5',
-    textAlign: 'center'
-  },
-  searchButton: {
-    background: '#3850A5',
-    outline: 'none',
-    border: 'none',
-    borderRadius: '2px',
-    boxShadow: '0px 3px rgba(0, 0, 0, 0.1)',
-    height: '35px',
-    width: '50%',
-    color: '#F5F5F5',
-    textAlign: 'center',
-    marginTop: '1rem',
-    marginBottom: '5rem'
-  }
-};
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -69,20 +21,22 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className='container'
-        style={ styles.container }>
+      <div className='search-container'>
 
-        <img src='/images/logo.png' alt='Logo' style={ styles.logo }></img>
+        <img src='/images/logo.png' alt='Logo' className='logo'></img>
 
-          <div className='search' style={ styles.searchColumn }>
+          <div className='search-column'>
 
-            <p style={ styles.fontStyles }>Search by Title!</p>
+            <p className='home-font'>Search by Title!</p>
 
-            <form onSubmit={ this.handleSubmit } style={ styles.searchColumn }>
+            <form className='search-column' onSubmit={ this.handleSubmit }>
 
-              <input type='search' placeholder='Movie Name' onChange={ this.handleChange } style={ styles.searchBox } />
+              <input className='search-box'
+                type='search'
+                placeholder='Movie Name'
+                onChange={ this.handleChange }/>
 
-              <button type='submit' style={ styles.searchButton }>
+              <button className='search-button' type='submit'>
                 Search
               </button>
 

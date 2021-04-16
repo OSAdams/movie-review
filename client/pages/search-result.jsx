@@ -9,7 +9,7 @@ class DisplayMovie extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://www.omdbapi.com/?t=${this.props.userInputValue}&apikey=67b9bb43`)
+    fetch(`https://www.omdbapi.com/?t=${this.props.userInputValue}&apikey=67b9bb43`)
       .then(res => res.json())
       .then(movie => {
         this.setState({ movie }, () => {
