@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewInput from '../components/user-input';
 
 class DisplayMovie extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class DisplayMovie extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://www.omdbapi.com/?t=${this.props.userInputValue}&apikey=67b9bb43`)
+    fetch(`https://www.omdbapi.com/?t=${this.props.userInputValue}&apikey=67b9bb43`)
       .then(res => res.json())
       .then(movie => {
         this.setState({ movie }, () => {
@@ -44,7 +45,7 @@ class DisplayMovie extends React.Component {
 
           <div className='movie-title'>
 
-            <h3>{Title}</h3>
+            <h2>{Title}</h2>
 
           </div>
 
@@ -161,6 +162,8 @@ class DisplayMovie extends React.Component {
             </div>
 
           </div>
+
+          <ReviewInput />
 
         </div>
 

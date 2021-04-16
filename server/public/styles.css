@@ -8,17 +8,12 @@ img {
   width: 100%;
 }
 
-::placeholder {
-  color: #f5f5f5;
-  text-align: center;
-}
-
 .search:focus {
   outline: none;
 }
 
 p {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .header {
@@ -43,9 +38,56 @@ p {
   color: #f5f5f5;
 }
 
+.logo {
+  margin-bottom: 1.5rem;
+}
+
+.search-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-box {
+  background: #6674ed;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1);
+  height: 35px;
+  width: 50%;
+  outline: none;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.search-box::placeholder {
+  color: #f5f5f5;
+  text-align: center;
+}
+
+.search-button {
+  background: #3850a5;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 3px rbga(0, 0, 0, 0.1);
+  height: 35px;
+  width: 50%;
+  color: #f5f5f5;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 5.05rem;
+}
+
+.search-button:active {
+  background: #807b8f;
+  color: #222;
+}
+
 .movie-container {
   background: #bebbd4;
-  padding-top: 5px;
+  padding: 1rem 0;
 }
 
 .movie-info-container {
@@ -53,6 +95,7 @@ p {
   width: 95%;
   margin: auto;
   color: #f5f5f5;
+  padding: 5px 0;
 }
 
 .movie-row {
@@ -72,15 +115,15 @@ p {
 
 .label {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .value {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .value-1 {
-  font-size: 12px;
+  font-size: 13px;
   text-align: right;
 }
 
@@ -103,4 +146,64 @@ p {
 
 .movie-plot {
   margin-top: 0.25rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #bebbd4;
+}
+
+.home-font {
+  color: #222;
+  font-size: 24px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-container {
+  margin: 5px 0.5rem;
+}
+
+.review-input {
+  width: 100%;
+  height: 7rem;
+  border: none;
+  background: #bebbd4;
+  color: #222;
+}
+
+.review-input::placeholder {
+  color: #222;
+}
+
+.review-input:focus {
+  outline: none;
+}
+
+.submit-button {
+  background: #8a67ed;
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 3px rbga(0, 0, 0, 0.3);
+  color: #f5f5f5;
+  height: 1.7rem;
+  width: 10rem;
+  font-size: 13px;
+}
+
+.submit-button:focus {
+  outline: none;
+}
+
+.submit-button:active {
+  background: #807b8f;
+  color: #222;
+}
+
+.review-submit-container {
+  margin-top: 0.4rem;
+  display: flex;
+  justify-content: flex-end;
 }
