@@ -61,7 +61,7 @@ p {
   text-align: center;
 }
 
-.search-box:placeholder {
+.search-box::placeholder {
   color: #f5f5f5;
   text-align: center;
 }
@@ -171,6 +171,10 @@ p {
   height: 7rem;
   border: none;
   background: #bebbd4;
+  color: #222;
+}
+
+.review-input::placeholder {
   color: #222;
 }
 
