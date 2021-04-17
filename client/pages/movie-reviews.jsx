@@ -4,7 +4,7 @@ export default class MovieReviews extends React.Component {
 
   render() {
     return (
-      <div className='review-container'>
+      <div className='movie-reviews-container'>
 
       </div>
     );

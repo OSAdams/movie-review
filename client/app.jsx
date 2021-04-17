@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './pages/home';
 import Navigation from './components/navigation';
 import DisplayMovie from './pages/search-result';
+import MovieReviews from './pages/movie-reviews';
 import parseRoute from './lib/parse-route.js';
 
 export default class App extends React.Component {
@@ -27,6 +28,10 @@ export default class App extends React.Component {
     if (route.path === 'search-results') {
       const title = route.params.get('title');
       return <DisplayMovie userInputValue={title} />;
+    }
+    if (route.path === 'movie-reviews') {
+      const title = route.params.get('title');
+      return <MovieReviews userInputValue={title} />;
     }
   }
 
